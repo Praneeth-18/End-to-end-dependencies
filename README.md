@@ -1,1 +1,5 @@
 # End-to-end-dependencies
+
+### Buisness Objective
+
+When we were updating Uber fare price prediction algorithm, using the number of parellel rides and weather condition (Refer the following Notebook for details : https://colab.research.google.com/drive/1F3jAfBr09KIIFqQBSzfT8Ri_OJo507Si?usp=sharing). We found that after training the models on new set of features the feature imporance of the 2 latent variables weren't as expected. As per buissness logic found on https://www.uber.com/en-GB/blog/uber-dynamic-pricing/, we know that the number of parellel rides should have a higher importance then the weather condition. As the reason for surge charge is parellel rides and not weather, the relation is bad weather causes more people to book cabs. Our guess for this behviour of the model is that the distribution of data in these 2 columns has something to do with it. The our goal for this experimentation is to see if by tweeking the distribution of the data based on the latent variables, will it be possible for us to improve the model's performance and correct the order of feature importance.
